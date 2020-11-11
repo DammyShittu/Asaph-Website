@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+:root{
+    --primary-color: rgb(61, 61, 61);
+    --secondary-color: blue;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+nav{
+    margin: 0;
+    padding: 0;
+}
+
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+
+.btn1 {
+    background-color: var(--secondary-color);
+    color: #fff;
+    outline: none;
+}
+
+.btn2 {
+    background-color: var(--secondary-color);
+    color: #fff;
+    outline: none;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.btn1:hover, .btn2:hover{
+    background-color: orange;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.dark, .dark1{
+    background-color: #f4f4f4;
+    color: black;
+    padding: 20px;
+
+}
+
+.dark:nth-of-type(1){
+    border-left: 70px rgb(75, 75, 77) solid;
+    border-radius: 30px;
+}
+.dark:nth-of-type(2){
+    border-right: 70px rgb(154, 154, 161) solid;
+   border-radius: 30px;
+}
+
+.dark1 {
+    border: 3px rgb(154, 154, 161) solid;
+    border-radius: 30px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    min-height: 70px;
+    border-bottom: 2px white solid;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    float: left;
+    font-size: 35px;
+    word-spacing: 0.1em;
+    letter-spacing: 3px;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+header li{
+    display: inline;
+    float: right;
+    list-style: none;
+    padding: 0 10px;
+    padding-top: 30px;
+    font-size: 1.0rem;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: lightgray;
+    
+}
+
+header .highlight, .current {
+    color: blue;
+    padding-bottom: 10px;
+}
+
+#showcase {
+    min-height: 350px;
+    background: url(./img/office.jpg) no-repeat 100%  -350px;
+    background-size: cover;
+    text-align: center;
+    
+}
+
+#showcase::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51,51,51,0.5);
+    
+}
+
+#showcase h1 {
+    font-size: 45px;
+    margin-top: 110px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+    z-index: 10;
+    position: relative;
+}
+
+
+#showcase p {
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+    z-index: 10;
+    position: relative;
+}
+
+
+#newsletter {
+    background-color: var(--primary-color);
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+#newsletter h3 {
+    float: left;
+    font-size: 25px;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 35px;
+}
+
+#newsletter input[type="text"] {
+    padding: 5px;
+    height: 25px;
+    width: 250px;
+}
+#newsletter button {
+    height: 25px;
+    padding: 0 20px;
+}
+
+#page-boxes {
+    margin-top: 40px;
+}
+
+#page-boxes .box {
+    float: left;
+    width: 30%;
+    padding: 25px;
+    text-align: center;
+    padding-left: 10px;
+}
+
+#page-boxes .box img{
+    width: 100px;
+    height: auto;
+}
+ 
+#page-boxes .box p {
+    font-size: 14px;
+}
+
+#main{
+    margin-top: 40px;
+
+}
+
+#main p{
+    font-size: 14px;
+}
+
+.main-art, #main-col{
+    float: left;
+    width: 60%;
+}
+
+aside{
+    float: right;
+    width: 35%;
+    margin-top: 70px;
+    
+}
+
+.page-title{
+    padding: 0 40px;
+}
+
+#services li, #services1{
+    list-style: none;
+    margin-bottom: 15px;
+    background-color: rgb(110, 109, 109);
+    color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    
+}
+
+
+.quote input, .quote textarea{
+width: 90%;
+padding: 5%;
+}
+
+
+
+#page-footer {
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(64, 64, 233);
+    text-align: center;
+}
+
+@media(max-width: 800px){
+      
+    #newsletter h3,
+    #newsletter form,
+     #page-boxes .box,
+     #main-col,
+      header nav,
+     #services li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header nav li {
+        padding: 0 10px 0 10px;
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+   
+    header h1{
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0;
+    }
+   
+    
+    #showcase {
+        min-height: 350px;
+        background: url(./img/office.jpg) no-repeat 100%  ;
+        background-size: cover;
+        text-align: center;
+        
+    }
+    #showcase h1{
+        margin-top: 40px;
+        font-size: 35px;
+    }
+
+    #newsletter input[type="text"]{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #newsletter button {
+        display: block;
+        width: 100%;
+    }
+   
+    #newsletter form input[type="email"] {
+        width: 100%;
+        margin-bottom: 5px;    
+    }
+
+    #services li{
+        float: none;
+        text-align: center;
+        max-width: 80%;
+    }
+
+    #services1 {
+        float: none;
+        text-align: center;
+        max-width: 70%;
+    }
+     
+    .main-art{
+        float: none;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .quote input, .quote textarea,.quote button
+    {
+        float: none;
+        text-align: center;
+        width: 80%;
+        
+    }
+
+        aside {
+            float: none;
+            text-align: center;
+            margin-top: -5px;
+            width: 80%; 
+            margin: 0 auto; 
+        }
+    
+   }
+   
+   
